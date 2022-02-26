@@ -14,8 +14,8 @@ public class DbConfiguration {
     public DataSource getDataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.url("jdbc:mysql://remotemysql.com/Xoaizfgh2D");
-        dataSourceBuilder.username("Xoaizfgh2D");
-        dataSourceBuilder.password("DNmhNeNLXn");
+        dataSourceBuilder.username("***** ***");
+        dataSourceBuilder.password("***** ***");
         dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
 
 //                dataSourceBuilder.url("jdbc:mysql://localhost/jpaForBeginners");
