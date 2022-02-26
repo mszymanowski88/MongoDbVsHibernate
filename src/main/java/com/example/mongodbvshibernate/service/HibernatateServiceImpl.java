@@ -2,7 +2,6 @@ package com.example.mongodbvshibernate.service;
 
 import com.example.mongodbvshibernate.apect.TimedHibernate;
 import com.example.mongodbvshibernate.daohibernate.HibernateRepo;
-import com.example.mongodbvshibernate.peoplemodel.Person;
 import com.example.mongodbvshibernate.utils.CsvFileReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -23,15 +22,16 @@ public class HibernatateServiceImpl implements HibernateService {
         this.hibernateRepo = hibernateRepo;
         this.csvFileReader = csvFileReader;
     }
+
     @Override
     @TimedHibernate
     @EventListener(ApplicationReadyEvent.class)
     public void saveToHibernate() throws IOException {
 
-        for (Person personToSave : csvFileReader.listFromFile1()) {
-            hibernateRepo.save(personToSave);
 
-        }
+        hibernateRepo.saveAll(csvFileReader.listFromFile());
+
+
     }
 
     @Override

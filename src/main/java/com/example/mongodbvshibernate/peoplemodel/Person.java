@@ -1,10 +1,13 @@
 package com.example.mongodbvshibernate.peoplemodel;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 
 
 @Entity
 @Table(name = "people")
+@DynamicUpdate
 public class Person {
 
 

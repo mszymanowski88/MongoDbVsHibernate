@@ -29,7 +29,7 @@ public class CsvFileReader {
     }
 
 
-    public List<Person> listFromFile1() throws IOException {
+    public List<Person> listFromFile() throws IOException {
 
         List<Person> resultFromFile = new ArrayList<>();
 
@@ -42,6 +42,7 @@ public class CsvFileReader {
                     csvRecord.get("last_name"),
                     csvRecord.get("email"),
                     csvRecord.get("gender")
+
 
             );
 
